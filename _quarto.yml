@@ -1,0 +1,9 @@
+project:
+  type: website
+
+website:
+  title: "Test Website"
+
+format:
+  html:
+    theme: cosmo
