@@ -56,6 +56,7 @@ library(INLA)
 library(BAS)
 library(patchwork)
 library(inlabru)
+library(fmesher)
 
 ```
 
