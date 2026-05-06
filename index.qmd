@@ -66,7 +66,7 @@ No knowledge of `R-INLA` or `inlabru` is required.
 | 14:30 - 15:30 | [Practical Session 1](practicals/LMM_ex.qmd) |
 |               |[Practical Session 2](practicals/GLMM_fit.qmd) |
 | 15:30 - 16:30 | [**Session 3**: Time Series Models](slides/slides_3.html)|
-| 16:30 | [**Session 3a**: comparison INLA versus inlabru]((Slides_Janine_pdf/inla_inlabru_comparison.pdf)|
+| 16:30 | [**Session 3a**: comparison INLA versus inlabru](Slides_Janine_pdf/inla_inlabru_comparison.pdf)|
 
 
 ### Day 2
