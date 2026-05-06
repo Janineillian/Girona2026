@@ -1,5 +1,5 @@
 ---
-title: "Spatial and apatio-temporal models with `inlabru`"
+title: "Spatial and spatio-temporal models with `inlabru`"
 author: "Jafet Belmont, Sara Martino and Janine Illian"
 subtitle: "Girona, 6-8 May 2026"
 format: 
