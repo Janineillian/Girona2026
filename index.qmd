@@ -97,7 +97,7 @@ No knowledge of `R-INLA` or `inlabru` is required.
 | 12:00 - 13:00 | Lunch break 🍽️ |
 | 13:00 - 14:00 | [Practical Session 5 (continued)](day3_practical_5.html) |
 | 14:00 - 15:00 | [**Session 8**: Spatiotemporal models](slides/slides_spatioTemporal.qmd)  |
-| 15:00 - 16:00 | [**Session 10**: Multi-likelihood/joint likelihood 5
+| 15:00 - 16:00 | [**Session 9**: Multi-likelihood/joint likelihood models](Slides_Janine_pdf/slides_10_inlabru.pdf) |
 | 16:00 - 17:00 | [Closing session](slides/slides_Closing_Remarks.qmd) and discussion|
 
 :::
