@@ -291,7 +291,7 @@
 \@ifundefined{codebgcolor}{\definecolor{codebgcolor}{named}{light}}{}
 \makeatother
 \makeatletter
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[colback={codebgcolor}, enhanced, breakable, boxrule=0pt, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, colback={codebgcolor}, frame hidden, boxrule=0pt, enhanced, sharp corners]}{\end{tcolorbox}}\fi
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -338,7 +338,7 @@
   Workshop materials are available in the github repository
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, rightrule=.15mm, leftrule=.75mm, toptitle=1mm, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, colback=white, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Important! ⚠️}, titlerule=0mm, toprule=.15mm, colframe=quarto-callout-warning-color-frame, bottomtitle=1mm, bottomrule=.15mm, opacitybacktitle=0.6, breakable, arc=.35mm, opacityback=0, coltitle=black]
+\begin{tcolorbox}[enhanced jigsaw, breakable, left=2mm, colframe=quarto-callout-warning-color-frame, toprule=.15mm, rightrule=.15mm, arc=.35mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Important! ⚠️}, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-warning-color!10!white, titlerule=0mm, leftrule=.75mm, opacityback=0, bottomrule=.15mm, toptitle=1mm]
 
 Please use the instructions provided \href{Install_software.qmd}{here}
 to install and check your installation \emph{before} the course start.
@@ -466,8 +466,9 @@ Processes} \\
 (continued)} \\
 14:00 - 15:00 & \href{slides/slides_spatioTemporal.qmd}{\textbf{Session
 8}: Spatiotemporal models} \\
-15:00 - 16:00 & {[}\textbf{Session 10}: Multi-likelihood/joint
-likelihood 5 \\
+15:00 - 16:00 &
+\href{Slides_Janine_pdf/slides_10_inlabru.pdf}{\textbf{Session 9}:
+Multi-likelihood/joint likelihood models} \\
 16:00 - 17:00 & \href{slides/slides_Closing_Remarks.qmd}{Closing
 session} and discussion \\
 \end{longtable}
