@@ -24,7 +24,7 @@ editor_options:
 ##  Important! ⚠️
 
  Please use the instructions provided [here](Install_software.qmd) to install and check your installation
-  *before* the course start.
+  *before* the course starts.
 :::
 
 # Learning Objectives for the workshop
@@ -38,7 +38,7 @@ At the end of the workshop, participants will have an understanding of:
 
 # Intended audience
 
-The workshop aims to cater for participants with a range of different backgrounds, who is interested in analysing data with modern spatial and spatio-temporal statistical modelling approaches.
+The workshop aims to cater for participants with a range of different backgrounds, who are interested in analysing data with modern spatial and spatio-temporal statistical modelling approaches.
 
 # Prerequisites
 
@@ -48,7 +48,7 @@ No knowledge of `R-INLA` or `inlabru` is required.
 
 # Schedule {#schedule-tabs}
 
-**NOTE** The schedule is indicative and some changes might come!
+**NOTE** The schedule is indicative and might change as we work through the material.
 
 
 ::: panel-tabset
@@ -115,9 +115,9 @@ https://inlabru-courses.github.io/NewCaledonia2026/
 
 ```bibtex
  @Manual{Belmont2026inlabru,
-   title = {inlabruCourseMarch2026: Course Materials for Noumea inlabru Course 10-14 March 2026},
+   title = {inlabruCourseMay2026: Course Materials for Girona inlabru Course 6-8 May 2026},
    author = {Belmont, Jafet and Martino, Sara and Illian, Janine},
    year = {2026},
-   url = {https://inlabru-courses.github.io/NewCaledonia2026/}
+   url = {https://janineillian.github.io/Girona2026/index.html}
 }
 ```

@@ -291,7 +291,7 @@
 \@ifundefined{codebgcolor}{\definecolor{codebgcolor}{named}{light}}{}
 \makeatother
 \makeatletter
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, colback={codebgcolor}, enhanced, breakable, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, enhanced, colback={codebgcolor}, breakable, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -315,8 +315,8 @@
 \pagestyle{mystyle}
 
 
-In this practical we are going to fit a Generalized (Mixed) Linear Model
-in \texttt{inlabru}.
+In this practical we are fitting a Generalized (Mixed) Linear Model in
+\texttt{inlabru}.
 
 We are going to:
 
@@ -345,17 +345,17 @@ We start by loading some useful libraries
 \end{Highlighting}
 \end{Shaded}
 
-In this practical we are going to analyse the dataset
-\texttt{grouseticks}. The data, contained in the library \texttt{lme4},
-Number of ticks on the heads of red grouse chicks sampled in the field.
-See \texttt{?grouseticks} for details.
+In this practical we are analysing the dataset \texttt{grouseticks}. The
+data, contained in the library \texttt{lme4}, consist of the number of
+ticks on the heads of red grouse chicks sampled in the field. See
+\texttt{?grouseticks} for details.
 
 The data are analysed in the paper
 
 Elston et al.~``Analysis of aggregation, a worked example: numbers of
 ticks on red grouse chicks.'' Parasitology
 
-and in this practical we will follow their analysis.
+and in this practical wefollow their analysis.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -386,9 +386,9 @@ y_{ijk}|\lambda_{ijk}\sim\text{Poisson}(\lambda_{ijk})
 a linear function of year, altitude, brood, and individual chick within
 brood. We assume a fixed effect \(\alpha_k\) of year \(k\), a linear
 effect of altitude \(x_{ij}\), two random effects \(e_{jk}\) and
-\(\epsilon_{ijk}\) brood and individual within brood respectively. Thus:
-\begin{equation}\phantomsection\label{eq-linpred}{
-\eta_{ijk} = \log(\lambda_{ijk}) = \alpha_k + \beta x_{ij} + e_{jk} + \epsilon_{ijk}
+\(\epsilon_{ijk}\) brood and individual within brood, respectively.
+Thus: \begin{equation}\phantomsection\label{eq-linpred}{
+\eta_{ijk} = \log(\lambda_{ijk}) = \alpha_k + \beta x_{ij} + e_{jk} + \epsilon_{ijk},
 }\end{equation}
 
 where \(e_{jk}\sim\mathcal{N}(0,\tau^{-1}_e)\) and
@@ -397,7 +397,7 @@ where \(e_{jk}\sim\mathcal{N}(0,\tau^{-1}_e)\) and
 We first fit the model using the default priors for fixed and random
 effects.
 
-To fit the model we first have to create two more variable, one that
+To fit the model, we first have to create two more variables, one that
 indexes the combination \(jk\) of brood and year and another that
 indexes the combination \(ijk\) of individuals per brood per year.
 
@@ -411,12 +411,12 @@ indexes the combination \(ijk\) of individuals per brood per year.
 \end{Highlighting}
 \end{Shaded}
 
-now we can fit the model.
+Now we can fit the model.
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title={Task}, colbacktitle=quarto-callout-warning-color!10!white, arc=.35mm, breakable, colframe=quarto-callout-warning-color-frame, bottomrule=.15mm, rightrule=.15mm, opacityback=0, bottomtitle=1mm, colback=white, leftrule=.75mm, left=2mm, toptitle=1mm, toprule=.15mm, titlerule=0mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, breakable, leftrule=.75mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, title={Task}, arc=.35mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, opacitybacktitle=0.6, colback=white]
 
 Complete the code to fit the model in Equation~\ref{eq-linpred}. You
-need to define the components, the likelihood and finaly use the
+need to define the components, the likelihood and finally use the
 \texttt{bru()} function to get the results
 
 \begin{Shaded}
@@ -456,7 +456,7 @@ Click here to see the solution
 
 Now we can check the results.
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title={Task}, colbacktitle=quarto-callout-warning-color!10!white, arc=.35mm, breakable, colframe=quarto-callout-warning-color-frame, bottomrule=.15mm, rightrule=.15mm, opacityback=0, bottomtitle=1mm, colback=white, leftrule=.75mm, left=2mm, toptitle=1mm, toprule=.15mm, titlerule=0mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, breakable, leftrule=.75mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, title={Task}, arc=.35mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, opacitybacktitle=0.6, colback=white]
 
 Plot the posterior distribution of the fixed effects: \(\beta\) and
 \(\alpha_k\).
@@ -483,9 +483,9 @@ Click here to see the solution
 
 \end{tcolorbox}
 
-We now want to look at the hyperparameters of the model
+We now want to look at the hyperparameters of the model.
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title={Task}, colbacktitle=quarto-callout-warning-color!10!white, arc=.35mm, breakable, colframe=quarto-callout-warning-color-frame, bottomrule=.15mm, rightrule=.15mm, opacityback=0, bottomtitle=1mm, colback=white, leftrule=.75mm, left=2mm, toptitle=1mm, toprule=.15mm, titlerule=0mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, breakable, leftrule=.75mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, title={Task}, arc=.35mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, opacitybacktitle=0.6, colback=white]
 
 Plot the posterior estimated of the standard deviation
 \(\sigma_e = \sqrt{1/\tau_e}\) and
@@ -616,7 +616,7 @@ effects}\label{change-the-precision-for-the-linear-effects}
 
 The precision for linear effects is set in the component definition. For
 example, if we want to increase the precision to 0.1 for we define the
-relative components as:
+respective components as:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -625,7 +625,7 @@ relative components as:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title={Task}, colbacktitle=quarto-callout-warning-color!10!white, arc=.35mm, breakable, colframe=quarto-callout-warning-color-frame, bottomrule=.15mm, rightrule=.15mm, opacityback=0, bottomtitle=1mm, colback=white, leftrule=.75mm, left=2mm, toptitle=1mm, toprule=.15mm, titlerule=0mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, breakable, leftrule=.75mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, title={Task}, arc=.35mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, opacitybacktitle=0.6, colback=white]
 
 Run the model again using 0.1 as default precision for the altitude
 slope parameter and for the \texttt{year} fixed effect
@@ -694,7 +694,7 @@ visualize the posterior density of the slope \(\beta\) we can type:
 \pandocbounded{\includegraphics[keepaspectratio]{GLMM_fit_files/figure-pdf/unnamed-chunk-13-1.pdf}}
 \end{center}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, title={Task}, colbacktitle=quarto-callout-warning-color!10!white, arc=.35mm, breakable, colframe=quarto-callout-warning-color-frame, bottomrule=.15mm, rightrule=.15mm, opacityback=0, bottomtitle=1mm, colback=white, leftrule=.75mm, left=2mm, toptitle=1mm, toprule=.15mm, titlerule=0mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, breakable, leftrule=.75mm, toptitle=1mm, colframe=quarto-callout-warning-color-frame, titlerule=0mm, bottomtitle=1mm, toprule=.15mm, title={Task}, arc=.35mm, rightrule=.15mm, coltitle=black, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, opacitybacktitle=0.6, colback=white]
 
 Plot the posterior marginals for the precision of brood and individual
 random effect \(\pi(\tau_e|y)\)

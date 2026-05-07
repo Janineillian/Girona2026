@@ -291,7 +291,7 @@
 \@ifundefined{codebgcolor}{\definecolor{codebgcolor}{named}{light}}{}
 \makeatother
 \makeatletter
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, colback={codebgcolor}, frame hidden, boxrule=0pt, enhanced, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, colback={codebgcolor}, breakable, enhanced, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -338,10 +338,10 @@
   Workshop materials are available in the github repository
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, breakable, left=2mm, colframe=quarto-callout-warning-color-frame, toprule=.15mm, rightrule=.15mm, arc=.35mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Important! ⚠️}, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, coltitle=black, colbacktitle=quarto-callout-warning-color!10!white, titlerule=0mm, leftrule=.75mm, opacityback=0, bottomrule=.15mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, opacityback=0, arc=.35mm, colbacktitle=quarto-callout-warning-color!10!white, opacitybacktitle=0.6, toptitle=1mm, leftrule=.75mm, colback=white, coltitle=black, left=2mm, colframe=quarto-callout-warning-color-frame, breakable, bottomtitle=1mm, toprule=.15mm, rightrule=.15mm, bottomrule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Important! ⚠️}]
 
 Please use the instructions provided \href{Install_software.qmd}{here}
-to install and check your installation \emph{before} the course start.
+to install and check your installation \emph{before} the course starts.
 
 \end{tcolorbox}
 
@@ -366,8 +366,8 @@ At the end of the workshop, participants will have an understanding of:
 \section{Intended audience}\label{intended-audience}
 
 The workshop aims to cater for participants with a range of different
-backgrounds, who is interested in analysing data with modern spatial and
-spatio-temporal statistical modelling approaches.
+backgrounds, who are interested in analysing data with modern spatial
+and spatio-temporal statistical modelling approaches.
 
 \section{Prerequisites}\label{prerequisites}
 
@@ -379,7 +379,8 @@ No knowledge of \texttt{R-INLA} or \texttt{inlabru} is required.
 
 \section{Schedule}\label{schedule-tabs}
 
-\textbf{NOTE} The schedule is indicative and some changes might come!
+\textbf{NOTE} The schedule is indicative and might change as we work
+through the material.
 
 \subsubsection{Day 1}
 
@@ -430,16 +431,16 @@ Topic
 \endlastfoot
 9:15 - 11:00 & \href{day2_practical_3.html}{Practical Session 3} \\
 11:00 - 12:00 &
-\href{Slides_Janine_pdf/slides_4_inlabru.pdf}{\textbf{Session 4}:
-Introduction to Spatial Statistics} \\
+\href{Slides_Janine_pdf/slides_session_4_inlabru.pdf}{\textbf{Session
+4}: Introduction to Spatial Statistics} \\
 12:00 - 13:00 & Lunch break 🍽️ \\
 13:00 - 14:00 & \href{day2_practical_4.html}{Practical Session 4} \\
 14.00 - 15:00 &
-\href{Slides_Janine_pdf/slides_5_inlabru.pdf}{\textbf{Session 5}: Areal
-processes} \\
+\href{Slides_Janine_pdf/slides_session_5_inlabru.pdf}{\textbf{Session
+5}: Areal processes} \\
 15:00 - 16:00 &
-\href{Slides_Janine_pdf/slides_6_inlabru.pdf}{\textbf{Session 6}:
-Geostatistics} \\
+\href{Slides_Janine_pdf/slides_session_6_inlabru.pdf}{\textbf{Session
+6}: Geostatistics} \\
 \end{longtable}
 
 \subsubsection{Day 3}
@@ -459,16 +460,16 @@ Topic
 \endlastfoot
 09:15 - 11:00 & \href{day3_practical_5.html}{Practical Session 5} \\
 11:00 - 12:00 &
-\href{Slides_Janine_pdf/slides_7_inlabru.pdf}{\textbf{Session 7}: Point
-Processes} \\
+\href{Slides_Janine_pdf/slides_session_7_inlabru.pdf}{\textbf{Session
+7}: Point Processes} \\
 12:00 - 13:00 & Lunch break 🍽️ \\
 13:00 - 14:00 & \href{day3_practical_5.html}{Practical Session 5
 (continued)} \\
 14:00 - 15:00 & \href{slides/slides_spatioTemporal.qmd}{\textbf{Session
 8}: Spatiotemporal models} \\
 15:00 - 16:00 &
-\href{Slides_Janine_pdf/slides_10_inlabru.pdf}{\textbf{Session 9}:
-Multi-likelihood/joint likelihood models} \\
+\href{Slides_Janine_pdf/slides_session_10_inlabru.pdf}{\textbf{Session
+9}: Multi-likelihood/joint likelihood models} \\
 16:00 - 17:00 & \href{slides/slides_Closing_Remarks.qmd}{Closing
 session} and discussion \\
 \end{longtable}
