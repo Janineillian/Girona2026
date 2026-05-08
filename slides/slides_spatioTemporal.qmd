@@ -610,8 +610,8 @@ round(fit_3$summary.hyperpar[,c(1,2, 3,5)],2)
 
 -   Models can be stuck together using either
 
-    -   `replicate` - the different *slices* are independent but share the hyperparameter
-    -   `group` - different dependence structures are implemented
+    -   `replicate` - the different *slices* are independent but share the same hyperparameters
+    -   `group` - the different *slices* are dependent; different types of dependence structures are implemented
 
 **Types of `group` model**
 

@@ -291,7 +291,7 @@
 \@ifundefined{codebgcolor}{\definecolor{codebgcolor}{named}{light}}{}
 \makeatother
 \makeatletter
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, breakable, enhanced, colback={codebgcolor}, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, breakable, frame hidden, sharp corners, colback={codebgcolor}, enhanced]}{\end{tcolorbox}}\fi
 \makeatother
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -338,7 +338,7 @@
   Workshop materials are available in the github repository
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, toptitle=1mm, bottomrule=.15mm, colframe=quarto-callout-warning-color-frame, breakable, toprule=.15mm, bottomtitle=1mm, leftrule=.75mm, opacitybacktitle=0.6, coltitle=black, titlerule=0mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Important! ⚠️}, arc=.35mm, rightrule=.15mm, colback=white, opacityback=0, colbacktitle=quarto-callout-warning-color!10!white]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, colbacktitle=quarto-callout-warning-color!10!white, bottomrule=.15mm, left=2mm, rightrule=.15mm, colframe=quarto-callout-warning-color-frame, breakable, toprule=.15mm, leftrule=.75mm, titlerule=0mm, toptitle=1mm, coltitle=black, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Important! ⚠️}, arc=.35mm, bottomtitle=1mm, colback=white, opacitybacktitle=0.6]
 
 Please use the instructions provided \href{Install_software.qmd}{here}
 to install and check your installation \emph{before} the course starts.
