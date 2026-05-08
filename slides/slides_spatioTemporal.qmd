@@ -90,13 +90,13 @@ library(terra)
 
 -   additional dependencies: in space and time
 
--   spatial and temporal behaviour can be *independent* on each other, or *dependent*: i.e. properties of the spatial structure vary through time (or vice versa)
+-   spatial and temporal behaviour can be *independent*, or *dependent*:\\ i.e.\ properties of the spatial structure vary through time (or \textit{vice versa})
 
 . . .
 
 Several options are available in `inlabru`
 
--   Areal Model
+-   Areal Models
 
 -   Geostatistical and Point Process models
 
@@ -356,7 +356,7 @@ We are going to see **3 different models for the linear predictor** $\eta_{st} =
 
 1.  **Model 1**: $\eta_{st} = \beta_0 + u_s + v_t$ with $u_s\sim\text{CAR}(\tau)$
 
-    Here the time effect $v_t$ is constant w.r.t. space and the space effect $u_t$ is constant w.r.t. time.
+    Here the temporal effect $v_t$ is constant w.r.t.\ space and the spatial effect $u_s$ is constant w.r.t.\ time.
 
 ## Model 1 - Implementation
 
@@ -424,13 +424,13 @@ $$
 
 We are going to see **3 different models for the linear predictor** $\eta_{st} = \log \lambda_{st}$
 
-1.  **Model 1**: $\eta_{st} = \beta_0 + u_s + v_t$ with $u_s\sim\text{CAR}(\tau)$
+1.  **Model 1**: $\eta_{st} = \beta_0 + u_s + v_t$ with $u_s\sim\text{iCAR}(\tau)$
 
     Here the time effect $v_t$ is constant w.r.t. space and the space effect $u_t$ is constant w.r.t. time.
 
-2.  **Model 2**: $\eta_{st} = \beta_0 + u_{st} + v_t$ with $u_{st}\sim\text{CAR}(\tau),\ i = 1,\dots,T$
+2.  **Model 2**: $\eta_{st} = \beta_0 + u_{st} + v_t$ with $u_{st}\sim\text{CAR}(\tau),\ t = 1,\dots,T$
 
-    Here the spatial fields are different for each year, they are independent on each other.
+    Here the spatial fields are different for each year, they are independent of each other.
 
 ## Model 2 - Implementation
 
@@ -497,16 +497,16 @@ We are going to see **3 different models for the linear predictor** $\eta_{st} =
 
     Here the time effect $v_t$ is constant w.r.t. space and the space effect $u_t$ is constant w.r.t. time.
 
-2.  **Model 2**: $\eta_{st} = \beta_0 + u_{st} + v_t$ with $u_{st}\sim\text{CAR}(\tau),\ i = 1,\dots,T$
+2.  **Model 2**: $\eta_{st} = \beta_0 + u_{st} + v_t$ with $u_{st}\sim\text{CAR}(\tau),\ t = 1,\dots,T$
 
-    Here the spatial fields are different for each year, they are independent on each other.
+    Here the spatial fields are different for each year, they are independent of each other.
 
 3.  **Model 3**: $\eta_{st} = \beta_0 + u_{st} + v_t$ with 
 $$
-    u_{st} = \phi u_{st-1} + w_{st}, \text{ with } w_{st}\sim\text{CAR}(\tau),\ i = 1,\dots,T
+    u_{st} = \phi u_{st-1} + w_{st}, \text{ with } w_{st}\sim\text{CAR}(\tau),\ t = 1,\dots,T
 $$
 
-Here we are adding more temporal dependence in the spatial term, using a AR1 type model Here the spatial fields are different for each year, they are independent on each other.
+Here we are adding more temporal dependence in the spatial term, using an AR1 type model.
 
 ## Model 3 - Implementation
 
@@ -580,9 +580,9 @@ $$
 
 **Compare**
 
--   Differences between Model 2 and 3 are not evident when estimating the past, but they would give different predictions
+-   Differences between Model 2 and 3 are not evident when estimating the past, but they would give different predictions.
 
--   Model 3 in this case seem to better fit the data (*more about these measures later*)
+-   Model 3 in this case seems to fit the data best (*more about these measures later*).
 
 ::::: columns
 ::: {.column width="50%"}
