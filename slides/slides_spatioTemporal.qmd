@@ -61,6 +61,7 @@ library(cowplot) # needs install.packages("magick") to draw images
 library(gghighlight)
 library(scico)
 library(terra)
+library(fmesher)
 
 ```
 
