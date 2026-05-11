@@ -427,7 +427,7 @@ We are going to see **3 different models for the linear predictor** $\eta_{st} =
 
 1.  **Model 1**: $\eta_{st} = \beta_0 + u_s + v_t$ with $u_s\sim\text{iCAR}(\tau)$
 
-    Here the time effect $v_t$ is constant w.r.t. space and the space effect $u_t$ is constant w.r.t. time.
+    Here the time effect $v_t$ is constant w.r.t.\ space and the space effect $u_t$ is constant w.r.t.\ time.
 
 2.  **Model 2**: $\eta_{st} = \beta_0 + u_{st} + v_t$ with $u_{st}\sim\text{CAR}(\tau),\ t = 1,\dots,T$
 
@@ -496,7 +496,7 @@ We are going to see **3 different models for the linear predictor** $\eta_{st} =
 
 1.  **Model 1**: $\eta_{st} = \beta_0 + u_s + v_t$ with $u_s\sim\text{CAR}(\tau)$
 
-    Here the time effect $v_t$ is constant w.r.t. space and the space effect $u_t$ is constant w.r.t. time.
+    Here the time effect $v_t$ is constant w.r.t. space and the space effect $u_t$ is constant w.r.t.\ time.
 
 2.  **Model 2**: $\eta_{st} = \beta_0 + u_{st} + v_t$ with $u_{st}\sim\text{CAR}(\tau),\ t = 1,\dots,T$
 
@@ -624,7 +624,7 @@ names(inla.models()$group)
 
 <br>
 
-**Note** The `group` and `replicate` features can be used for more than space-time modeling!
+**Note** The `group` and `replicate` features can be used for more than space-time modelling!
 
 # Continuous space models
 
@@ -715,7 +715,7 @@ ggplot() + geom_sf(data = dd,aes(color = Y), size = 0.5) + facet_wrap(.~time) +
 
 ```
 
-## Spatio temporal models for areal data {.smaller}
+## Spatio temporal models for georeferenced data {.smaller}
 
 The observation model
 
@@ -727,7 +727,7 @@ We are going to see **3 different models for the linear predictor** $\eta_{st}$
 
 1.  **Model 1**: $\eta_t(s) = \beta_0 + u(s) + v_t$ with $u(s)\sim\text{GF}(\rho,\sigma_u)$
 
-    Here the time effect $v_t$ is constant w.r.t. space and the space effect $u(s)$ is constant w.r.t. time.
+    Here the time effect $v_t$ is constant w.r.t.\ space and the space effect $u(s)$ is constant w.r.t.\ time.
 
 ## Model 1 - Implementation
 
@@ -827,7 +827,7 @@ pred_1 = predict(fit_1, pxl_time, ~ data.frame(mu = Intercept + space + time,
   coord_sf() + theme_map + scale_fill_scico()
 ```
 
-## Spatio temporal models for areal data {.smaller}
+## Spatio temporal models for georeferenced data {.smaller}
 
 The observation model
 
@@ -906,7 +906,7 @@ pred_2 = predict(fit_2, pxl_time, ~ data.frame(mu = Intercept + space + time,
   coord_sf() + theme_map + scale_fill_scico()
 ```
 
-## Spatio temporal models for areal data {.smaller}
+## Spatio temporal models for georeferenced data {.smaller}
 
 The observation model
 
@@ -929,7 +929,7 @@ $$
     u_t(s) = \phi\ u_{t-1}(s)  + \omega(s),\text{ with }  \omega(s)\sim\text{GF}(\rho,\sigma_u)
 $$
 
-    Here we are adding more temporal dependence in the spatial term, using a AR1 type model Here the spatial fields are different for each year, they are independent on each other.
+    Here we are adding more temporal dependence in the spatial term, using an AR1 type model.
 
 ## Model 3 - Implementation {.smaller}
 
@@ -1131,7 +1131,7 @@ dd_2 = dd %>% mutate(covariate = cov_data) %>%
 dd_1 = dd_2 %>% select(Y, time)
 ```
 
--   Have the covariate as a multilier `spatraster` object
+-   Have the covariate as a multi-layer `spatraster` object
 
 ```{r}
 #| echo: true
@@ -1145,7 +1145,7 @@ cov_space_time
 dd_1[1:3,]
 ```
 
-**Note** The layers names in the raster are the same as the elements of the column `time` in the data.
+**Note** The names of the layers in the raster are the same as the elements of the column `time` in the data.
 
 ## Space-time covariates
 
@@ -1258,7 +1258,7 @@ fit <- bru(cmp, lik)
 1.  Define the component (with the `group` feature)
 2.  Define the likelihood model
 
--   Where is our process defined (space and time)
+-   Where is our process defined (space and time)?
 
 ```{r}
 #| echo: true
@@ -1288,7 +1288,7 @@ fit <- bru(cmp, lik)
 1.  Define the component (with the `group` feature)
 2.  Define the likelihood model
 
--   Where is our process defined (space and time)
+-   Where is our process defined (space and time)?
 
 -   Domain of integration
 
@@ -1402,7 +1402,7 @@ That could be interesting in many of your studies!!
 
 -   Some non-separable models are implemented in `inlabru`. See
 
-_Lindgrenn et al., A diffusion-based spatio-temporal extension of Gaussian Matern fields (2024) SORT 48_
+_Lindgren et al., A diffusion-based spatio-temporal extension of Gaussian Matern fields (2024) SORT 48_
 
 Here they introduce a diffusion-type process that evolves in space and time.
 
