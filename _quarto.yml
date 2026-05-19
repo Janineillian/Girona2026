@@ -41,16 +41,19 @@ website:
         href: slides/slides_2.qmd
       - text: Slides 3 - Temporal Models
         href: slides/slides_3.qmd
-      - href: Slides_Janine_pdf/slides_5_inlabru.pdf
-        text: Lecture 4 - Intro to spatial modeling (PDF)
+      - href: Slides_Janine_pdf/inla_inlabru_comparison.pdf
+        text: Lecture 3a - Comparison INLA and inlabru (PDF)
         target: _blank
-      - href: Slides_Janine_pdf/slides_6_inlabru.pdf
+      - href: Slides_Janine_pdf/slides_session4_inlabru.pdf
+        text: Lecture 4 - Intro to spatial modelling (PDF)
+        target: _blank
+      - href: Slides_Janine_pdf/slides_session5_inlabru.pdf
         text: Lecture 5 - Area Data (PDF)
         target: _blank
-      - href: Slides_Janine_pdf/slides_7_inlabru.pdf
+      - href: Slides_Janine_pdf/slides_session6_inlabru.pdf
         text: Lecture 6 - Geostatistics (PDF)
         target: _blank
-      - href: Slides_Janine_pdf/slides_8_inlabru.pdf
+      - href: Slides_Janine_pdf/slides_session7_inlabru.pdf
         text: Lecture 7 - Point Processes (PDF)
         target: _blank
       - text: Slides 8 - Spatio-Temporal Models
@@ -58,7 +61,7 @@ website:
       - text: Slides 9 - Model Comparison
         href: slides/slides_Model_Comparison.qmd
       - text: Slides 10 - Multiple Likelihoods Models
-        href: Slides_Janine_pdf/slides_11_inlabru.pdf
+        href: Slides_Janine_pdf/slides_session10_inlabru.pdf
         target: _blank
 
     - text: Practicals
